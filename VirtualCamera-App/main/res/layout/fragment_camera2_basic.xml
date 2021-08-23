@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.forrest.ui.CameraGLSurfaceView
+        android:id="@+id/gl_surface_view"
+        android:layout_width="1080dp"
+        android:layout_height="1920dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入对方IP地址:"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"/>
+
+    <EditText
+        android:id="@+id/et_remote_ip"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="59dp"
+        android:layout_toEndOf="@+id/tv_notice"
+        android:hint="127.0.0.1"
+        android:text="127.0.0.1"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btn_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扫一扫"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btn_sb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="人脸识别"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btn_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="后置"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
