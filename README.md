@@ -5,6 +5,8 @@ VirtualCamera-App --- 安装在手机端的图像采集APP
 
 VirtualCamera --- 安装在云手机系统的native service图像接收程序
 
+备注：该项目还需要改Android的CameraService
+
 云手机项目可实现功能：
 
 1、模拟手机型号imei等各类手机机型传感器信息(三星等海外品牌手机,支持5款机型imei等各类信息切换预留好接口支持我们动态设置)
