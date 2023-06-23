@@ -22,3 +22,5 @@ VirtualCamera --- 安装在云手机系统的native service图像接收程序
 eg:
 
 https://github.com/jianglin-code/android-virtualcamera/blob/main/RK3588%E4%BA%91%E6%89%8B%E6%9C%BA%E6%BC%94%E7%A4%BA.MP4
+
+https://github.com/jianglin-code/android-virtualcamera/blob/main/RK3588%E4%BA%91%E6%89%8B%E6%9C%BA%E6%BC%94%E7%A4%BA1.mp4
