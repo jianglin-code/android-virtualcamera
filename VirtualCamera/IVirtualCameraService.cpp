@@ -1,4 +1,4 @@
-#define LOG_TAG "CELLSSERVICE"
+#define LOG_TAG "VIRTUALCAMERASERVICE"
 
 #include <utils/Errors.h>
 #include <utils/RefBase.h>

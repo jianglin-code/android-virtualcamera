@@ -78,7 +78,7 @@ static void sCopyFrame(const uint8_t *src, uint8_t *dest,
 }
 
 static int sDirectCopyToSurface(uint8_t *rgb, int w, int h, 
-                ANativeWindow *window) {
+                ANativeWindow *window) { 
     int result = 0;
     if (window != NULL) {
         ANativeWindow_Buffer buffer;
@@ -95,7 +95,7 @@ static int sDirectCopyToSurface(uint8_t *rgb, int w, int h,
                 const int dest_step = buffer.stride * 4;
                 const int width = src_w < dest_w ? src_w : dest_w;
                 const int height = h < buffer.height ? h : buffer.height;
-                sCopyFrame(src, dest, width, height, src_step, dest_step);
+                sCopyFrame(src, dest, width, height-10, src_step, dest_step);
             }
             //ALOGD("buffer width = %d , height = %d , stride = %d , format = %d ", buffer.width, buffer.height, buffer.stride, buffer.format);
             /*if(msCallBackWindow.get() != 0){
@@ -577,11 +577,11 @@ static int get_virtualcamera_ip(uint8_t* ip)
 		close(ipfd);
 	}else{
 		ALOGD("open /data/.virtualcameraip failed!");
-        ip[0]  = 192;
-        ip[1]  = 168;
-        ip[2]  = 63;
-        ip[3]  = 13;
-        result = 4;
+		ip[0]  = 192;
+		ip[1]  = 168;
+		ip[2]  = 1;
+		ip[3]  = 8;
+		result = 4;
     }
 
     return result;
@@ -616,10 +616,10 @@ status_t VirtualCameraService::setSurface(const sp<IGraphicBufferProducer>& buff
     status_t res;
     Mutex::Autolock l(mInputMutex);
 
-    if(width == 640 && height == 480){
+    /*if(width == 640 && height == 480){
         msWindow = nullptr;
         return NO_ERROR;
-    }
+    }*/
 
     if (bufferProducer != 0) {
         window = new Surface(bufferProducer, true);

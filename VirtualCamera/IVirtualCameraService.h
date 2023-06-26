@@ -1,5 +1,5 @@
-#ifndef __ICELLSSERVICE_H__
-#define __ICELLSSERVICE_H__
+#ifndef __IVIRTUALCAMERASERVICE_H__
+#define __IVIRTUALCAMERASERVICE_H__
 
 #include <binder/IInterface.h>
 #include <binder/Parcel.h>

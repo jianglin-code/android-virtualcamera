@@ -1,14 +1,14 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS) 
-LOCAL_PREBUILT_LIBS := ffmpeg/libs/android/armeabi-v7a/libavcodec.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libavdevice.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libavfilter.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libavutil.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libpostproc.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libswresample.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libswscale.a
-LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/armeabi-v7a/libavformat.a
+LOCAL_PREBUILT_LIBS := ffmpeg/libs/android/arm64-v8a/libavcodec.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libavdevice.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libavfilter.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libavutil.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libpostproc.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libswresample.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libswscale.a
+LOCAL_PREBUILT_LIBS += ffmpeg/libs/android/arm64-v8a/libavformat.a
 include $(BUILD_MULTI_PREBUILT) 
 
 #
