@@ -5,7 +5,11 @@ VirtualCamera-App --- 安装在手机端的图像采集APP
 
 VirtualCamera --- 安装在云手机系统的native service图像接收程序
 
-备注：该项目还需要改Android的CameraService
+hardware/rockchip/camera_vir --- hal camera provider
+
+frameworks/av/services/camera/libcameraservice --- cameraservice
+
+备注：RK3588 Android 基线代码 https://wiki.t-firefly.com/zh_CN/ROC-RK3588S-PC/android_compile_android12.0_firmware.html
 
 云手机项目可实现的功能：
 
@@ -22,3 +26,6 @@ eg:
 https://github.com/jianglin-code/android-virtualcamera/blob/main/RK3588%E4%BA%91%E6%89%8B%E6%9C%BA%E6%BC%94%E7%A4%BA.MP4
 
 https://github.com/jianglin-code/android-virtualcamera/blob/main/RK3588%E4%BA%91%E6%89%8B%E6%9C%BA%E6%BC%94%E7%A4%BA1.mp4
+
+---
+欢迎使用！

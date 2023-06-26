@@ -1,0 +1,136 @@
+//
+// Copyright (C) 2017 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+cc_library_headers {
+    name: "camera.device@3.4-virtual-impl_headers",
+    vendor: true,
+    export_include_dirs: ["include/vir_device_v3_4_impl"],
+}
+cc_prebuilt_library_shared {
+     name: "librkdepth",
+     vendor: true,
+     arch: {
+         arm: {
+             srcs: ["prebuild/arm/librkdepth.so"],
+         },
+         arm64: {
+             srcs: ["prebuild/arm64/librkdepth.so"],
+         }
+     },
+     shared_libs: [
+        "librga",
+        "liblog",
+        "libdrm",
+     ],
+     export_include_dirs: ["prebuild"],
+}
+cc_library_shared {
+    name: "camera.device@3.4-virtual-impl",
+    defaults: ["hidl_defaults"],
+    proprietary: true,
+    vendor: true,
+    srcs: [
+        "VirtualCameraDevice.cpp",
+        "VirtualCameraDeviceSession.cpp",
+        "VirtualCameraUtils.cpp",
+        "RgaCropScale.cpp",
+        "VirtualCameraMemManager.cpp",
+        "VirtualCameraGralloc4.cpp"
+    ],
+    include_dirs: [
+        "hardware/rockchip/libhwjpeg/inc",
+        "hardware/rockchip/libhwjpeg/inc/mpp_inc",
+        "hardware/rockchip/librga",
+        "external/libdrm/include/drm",
+    ],
+    header_libs: [
+        "gl_headers",
+        "libbase_headers",
+        "libnativebase_headers",
+        "libhardware_headers",
+        "libui_headers",
+    ],
+    shared_libs: [
+        "librkdepth",
+        "libhidlbase",
+        "libutils",
+        "libcutils",
+        "libdrm",
+        "camera.device@3.2-impl",
+        "camera.device@3.3-impl",
+        "android.hardware.camera.device@3.2",
+        "android.hardware.camera.device@3.3",
+        "android.hardware.camera.device@3.4",
+        "android.hardware.camera.provider@2.4",
+        "liblog",
+        "libgralloctypes",
+        "libhardware",
+        "libcamera_metadata",
+        "libfmq",
+        "libsync",
+        "libyuv",
+        "libjpeg",
+        "libexif",
+        "libtinyxml2",
+        "libui",
+        "librga",
+        "libhwjpeg",
+        "libbase",
+        "android.hardware.graphics.allocator@2.0",
+        "android.hardware.graphics.allocator@3.0",
+        "android.hardware.graphics.allocator@4.0",
+        "android.hardware.graphics.common@1.2",
+        "android.hardware.graphics.mapper@2.0",
+        "android.hardware.graphics.mapper@2.1",
+        "android.hardware.graphics.mapper@3.0",
+        "android.hardware.graphics.mapper@4.0",
+    ],
+    static_libs: [
+        "android.hardware.camera.common@1.0-helper",
+        "libgrallocusage",
+    ],
+    // bufferhub is not used when building libgui for vendors
+    target: {
+        vendor: {
+            cflags: ["-DLIBUI_IN_VNDK"],
+            exclude_srcs: [
+            ],
+            exclude_header_libs: [
+            ],
+            exclude_shared_libs: [
+            ],
+        },
+    },
+    cppflags: [
+        "-DISP_HW_V30",
+        "-Wno-error",
+        "-Wno-unused",
+        "-Wunused-function",
+        "-Wunused-private-field",
+        "-DRK_HW_JPEG_DECODER",
+        "-DRK_GRALLOC_4",
+    ],
+    local_include_dirs: ["include/vir_device_v3_4_impl"],
+    export_shared_lib_headers: [
+        "libfmq",
+        "libhwjpeg",
+        "android.hardware.graphics.common@1.2",
+        "android.hardware.graphics.mapper@4.0",
+        "android.hardware.graphics.allocator@4.0",
+        "libgralloctypes",
+    ],
+	min_sdk_version: "29",
+}

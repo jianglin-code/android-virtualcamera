@@ -1,0 +1,8 @@
+service vendor.camera-provider-2-4-vir /vendor/bin/hw/android.hardware.camera.provider@2.4-virtual-service
+    interface android.hardware.camera.provider@2.4::ICameraProvider virtual/0
+    class hal
+    user cameraserver
+    group audio camera input drmrpc usb
+    ioprio rt 4
+    capabilities SYS_NICE
+    task_profiles CameraServiceCapacity MaxPerformance
