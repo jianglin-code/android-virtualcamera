@@ -28,4 +28,4 @@ https://github.com/jianglin-code/android-virtualcamera/blob/main/RK3588%E4%BA%91
 https://github.com/jianglin-code/android-virtualcamera/blob/main/RK3588%E4%BA%91%E6%89%8B%E6%9C%BA%E6%BC%94%E7%A4%BA1.mp4
 
 ---
-有问题请留言。
+只是一种思路，有问题请留言。
