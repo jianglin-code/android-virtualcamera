@@ -9,7 +9,8 @@ hardware/rockchip/camera_vir --- hal camera provider
 
 frameworks/av/services/camera/libcameraservice --- cameraservice
 
-备注：RK3588 Android基线代码 https://wiki.t-firefly.com/zh_CN/ROC-RK3588S-PC/android_compile_android12.0_firmware.html
+RK3588 Android基线代码：
+https://wiki.t-firefly.com/zh_CN/ROC-RK3588S-PC/android_compile_android12.0_firmware.html
 
 云手机项目可实现的功能：
 
