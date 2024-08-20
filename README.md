@@ -16,7 +16,7 @@ https://wiki.t-firefly.com/zh_CN/ROC-RK3588S-PC/android_compile_android12.0_firm
 
 1、设备定制，运行环境可模拟各品牌手机，并且可以通过安兔兔，鲁大师检测，最重要的可以通过微信免密登录，相关方案发表在ICSE'2021 《App's Auto-Login Function Security Testing via Android OS-Level Virtualization》
 
-2、模拟WIFI信号，模拟电源信号，模拟GPS信号，模拟SIM卡信号
+2、模拟WIFI网络，模拟电源，模拟GPS定位，模拟SIM卡
 
 3、root授权，可对单个APP进行授权
 
