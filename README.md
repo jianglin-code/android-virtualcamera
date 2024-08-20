@@ -22,5 +22,7 @@ https://wiki.t-firefly.com/zh_CN/ROC-RK3588S-PC/android_compile_android12.0_firm
 
 4、虚拟摄像头，实现扫码，人脸识别等功能
 
+[DEMO](https://github.com/jianglin-code/android-virtualcamera/blob/main/demos/RK3588%E4%BA%91%E6%89%8B%E6%9C%BA%E6%BC%94%E7%A4%BA.mp4)
+
 ---
 只是一种思路，有问题请留言。
